@@ -6,6 +6,10 @@
 using namespace std;
 
 int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    
     int N;
     int tmp;
     map<int, int> m;
@@ -18,11 +22,7 @@ int main() {
     cin >> N;
     while (N--) {
         cin >> tmp;
-        auto it = m.find(tmp);
-        if (it != m.end())
-            std::cout << it->second << " ";
-        else
-            std::cout << "0" << " ";
+        cout << m[tmp] << " ";
     }
     return 0;
 }
